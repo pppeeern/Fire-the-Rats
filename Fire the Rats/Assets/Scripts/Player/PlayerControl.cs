@@ -4,43 +4,68 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float moveSpeed = 2;
+    public int PlayerIndex;
+    public float moveSpeed = 10;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
+    public Vector2 movement;
 
-    //Bindings
-    public KeyCode Up;
-    public KeyCode Down;
-    public KeyCode Left;
-    public KeyCode Right;
+    private GrabItem grabItem;
+    public bool canMove = true;
+    public GameObject indicator;
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        grabItem = gameObject.GetComponent<GrabItem>();
+        grabItem.Direction = new Vector2(0, -1);
     }
 
     private void Update()
     {
-        if(UnityEngine.Input.GetKey(Up))
-        {
-            rb.velocity = new Vector2(0, moveSpeed);
+        if (PlayerIndex == 1){
+            movement.x = UnityEngine.Input.GetAxisRaw("P1_H");
+            movement.y = UnityEngine.Input.GetAxisRaw("P1_V");
+            movement.Normalize();
         }
-        else if(UnityEngine.Input.GetKey(Down))
-        {
-            rb.velocity = new Vector2(0, -moveSpeed);
+        else if (PlayerIndex == 2){
+            movement.x = UnityEngine.Input.GetAxisRaw("P2_H");
+            movement.y = UnityEngine.Input.GetAxisRaw("P2_V");
+            movement.Normalize();
         }
-        else if(UnityEngine.Input.GetKey(Left))
+        else
         {
-            rb.velocity = new Vector2(-moveSpeed, 0);
+            movement.x = UnityEngine.Input.GetAxisRaw("Horizontal");
+            movement.y = UnityEngine.Input.GetAxisRaw("Vertical");
+            movement.Normalize();
         }
-        else if(UnityEngine.Input.GetKey(Right))
+        if (movement.sqrMagnitude > .1f)
         {
-            rb.velocity = new Vector2(moveSpeed, 0);
+            grabItem.Direction = movement.normalized;
         }
-        else 
+        ThrowIndicatior();
+    }
+
+    private void FixedUpdate()
+    {
+        if (canMove)
         {
-            rb.velocity = new Vector2(0, 0);
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
+        else{rb.velocity = Vector2.zero;}
+    }
+
+    void ThrowIndicatior()
+    {
+        Vector3 aim = new(movement.x, movement.y, 0.0f);
+        if (aim.magnitude > 0.0f)
+        {
+            aim.Normalize();
+            movement.Normalize();
+            if (aim.x == 0){aim.y += 0.5f;}
+            indicator.transform.localPosition = aim*1.2f;
+            //indicator.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg);
         }
     }
 }
