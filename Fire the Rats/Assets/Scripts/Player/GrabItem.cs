@@ -11,9 +11,9 @@ public class GrabItem : MonoBehaviour
     public Transform grabPos;
     public LayerMask layerMask;
     public Vector3 Direction { get; set; }
-    private GameObject itemHold;
+    public GameObject itemHold;
     private PlayerControl playerControl;
-    private bool isHolding = false;
+    public bool isHolding = false;
 
     private void Start()
     {playerControl = gameObject.GetComponent<PlayerControl>();}
@@ -28,10 +28,6 @@ public class GrabItem : MonoBehaviour
                 itemHold = grabItem.gameObject;
                 isHolding = true;
                 Debug.Log($"Player {playerControl.PlayerIndex} is holding {itemHold}");
-                /*if (itemHold.name == "Gem") // Check held item, if is ...
-                {
-                    //Do something
-                }*/
                 itemHold.transform.position = grabPos.position;
                 itemHold.transform.SetParent(grabPos);
                 itemHold.GetComponent<SpriteRenderer>().sortingOrder = 1;
