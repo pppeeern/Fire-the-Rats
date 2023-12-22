@@ -37,6 +37,25 @@ public class Mission : MonoBehaviour
         }
     }
 
+    public float Duration;
+    public Image FillCircle;
+
+    private float holdTimer = 0;
+    private bool isHold = false;
+
+    private void Progress()
+    {
+        if(isHold)
+        {
+            holdTimer += Time.deltaTime;
+            FillCircle.fillAmount = holdTimer / Duration;
+            if(holdTimer >= Duration)
+            {
+
+            }
+        }
+    }
+
     private void FixWire()
     {
         if (player.GetComponent<GrabItem>().itemHold.name == "Gem")
