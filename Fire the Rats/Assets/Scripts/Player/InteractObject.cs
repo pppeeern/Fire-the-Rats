@@ -22,18 +22,18 @@ public class InteractObject : MonoBehaviour
             Collider2D interactObj = Physics2D.OverlapCircle(transform.position, 1, layerMask);
             if(interactObj && interactObj.CompareTag("Mission"))
             {
-                if(isInteract == false)
-                {
-                    isInteract = true;
-                    Debug.Log($"Player {playerControl.PlayerIndex} is interact {interactObj.name}: {isInteract}");
+                /*if(isInteract == false)
+                {*/
+                    //isInteract = true;
                     interactObj.GetComponent<Mission>().Interact();
-                }
-                else
+                    Debug.Log($"Player {playerControl.PlayerIndex} is interact {interactObj.name}: {isInteract}");
+                //}
+                /*else
                 {
                     isInteract = false;
-                    playerControl.canMove = true;
-                    Debug.Log($"Player {playerControl.PlayerIndex} is interact {interactObj.name}: {isInteract}");
-                }
+                    //playerControl.canMove = true;
+                    //Debug.Log($"Player {playerControl.PlayerIndex} is interact {interactObj.name}: {isInteract}");
+                }*/
             }
         }
     }
