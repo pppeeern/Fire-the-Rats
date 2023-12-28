@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,28 +7,43 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public bool isInRange;
-    public KeyCode interactKey;
     public UnityEvent interactAction;
     public UnityEvent interactExit;
-        
+    public GameObject player;
+    private String interactKey;
     bool interacting;
 
     void Update()
     {
         if (isInRange)
         {
-            UIEnable();
-            if(Input.GetKeyDown(interactKey))
+            if(player.GetComponent<PlayerControl>().PlayerIndex == 1)
+            {
+                interactKey = "1Interact";
+            }
+            else if(player.GetComponent<PlayerControl>().PlayerIndex == 2)
+            {
+                interactKey = "2Interact";
+            }
+            if(Input.GetButtonDown(interactKey))
             {
                 if(!interacting)
                 {
                     interacting = true;
+                    UIDisable();
                     interactAction.Invoke();
                 }
                 else
                 {
                     interacting = false;
                     interactExit.Invoke();
+                }
+            }
+            else
+            {
+                if(!interacting)
+                {
+                    UIEnable();
                 }
             }
         }
@@ -39,30 +55,33 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        player = collision.gameObject;
+        if(player.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Player in range");
+            Debug.Log($"{player.name} in {transform.parent.name} range");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        player = collision.gameObject;
+        if (player.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Player out of range");
+            Debug.Log($"{player.name} out of {transform.parent.name} range");
         }
+        player = null;
     }
 
-    [SerializeField] private GameObject container;
+    [SerializeField] private GameObject uiContainer;
 
     public void UIEnable()
     {
-        container.SetActive(true);
+        uiContainer.SetActive(true);
     }
     public void UIDisable()
     {
-        container.SetActive(false);
+        uiContainer.SetActive(false);
     }
 }
