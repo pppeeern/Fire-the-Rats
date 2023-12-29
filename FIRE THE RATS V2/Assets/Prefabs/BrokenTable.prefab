@@ -261,6 +261,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2883431915568146501, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
       insertIndex: 2
       addedObject: {fileID: 6935493920908315858}
+    - targetCorrespondingSourceObject: {fileID: 2883431915568146501, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3019231482365021836}
   m_SourcePrefab: {fileID: 100100000, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
 --- !u!114 &5716827858063250805 stripped
 MonoBehaviour:
@@ -343,6 +346,21 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &3019231482365021836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388443202205506177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c506c65655b624e8e8c72ad920b695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdKey: 32
+  holdDuration: 1
+  progressBar: {fileID: 3316531055165147226}
 --- !u!224 &6587074796016621604 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3154121259168475872, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
