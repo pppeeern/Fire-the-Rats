@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,11 +13,17 @@ public class Interactable : MonoBehaviour
     public GameObject player;
     private String interactKey;
     bool interacting;
+    [SerializeField] private GameObject uiContainer;
+    
+    [Header ("Highlight")]
+    [SerializeField] private Material defaultMat;
+    [SerializeField] private Material highlight;
 
     void Update()
     {
         if (isInRange)
         {
+            GetComponentInParent<SpriteRenderer>().material = highlight;
             if(player.GetComponent<PlayerControl>().PlayerIndex == 1)
             {
                 interactKey = "1Interact";
@@ -49,6 +56,7 @@ public class Interactable : MonoBehaviour
         }
         else
         {
+            GetComponentInParent<SpriteRenderer>().material = defaultMat;
             interactExit.Invoke();
         }
     }
@@ -73,8 +81,6 @@ public class Interactable : MonoBehaviour
         }
         player = null;
     }
-
-    [SerializeField] private GameObject uiContainer;
 
     public void UIEnable()
     {

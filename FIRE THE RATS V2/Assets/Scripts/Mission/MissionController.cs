@@ -1,61 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MissionController : MonoBehaviour
 {
-    public bool isTrigger = false;
-    private Interactable field;
-    private GameObject player;
+    [SerializeField] int numberOfMission;
+    [SerializeField] List<GameObject> missionReferences;
+    public GameObject[] missionLists;
+    public bool isRandom;
 
-    void Start()
+    public void Start()
     {
-        field = GetComponentInChildren<Interactable>();
+       isRandom = false;
+       missionLists = GetMissions(missionReferences, numberOfMission).ToArray();
+       isRandom = true;
+       if(isRandom)
+       {
+            for(int i = 0; i <= missionLists.Length - 1; i++)
+            {
+                Debug.Log($"{missionLists[i].name}   Position: {missionLists[i].transform.position}");
+                Instantiate(missionLists[i], missionLists[i].transform.position, missionLists[i].transform.rotation, transform.parent);
+            }
+       }
+       
     }
 
-    void Update()
+    List<T> GetMissions<T>(List<T> inputList, int count)
     {
-        player = field.player;
+        List<T> inputListClone = new(inputList);
+        Shuffle(inputListClone);
+        return inputListClone.GetRange(0, count);
     }
 
-    public void MissionTrigger()
+    void Shuffle<T>(List<T> inputList)
     {
-        if(!isTrigger)
+        for(int i = 0; i < inputList.Count - 1; i++)
         {
-            Debug.Log("Mission Trigger");
-            isTrigger = true;
-            player.GetComponent<PlayerControl>().CanMove = false;
-            Mission();
-        }
-    }
-
-    public void MissionExit()
-    {
-        if(isTrigger)
-        {
-            isTrigger = false;
-            player.GetComponent<PlayerControl>().CanMove = true;
-            Debug.Log("Mission Exit");
-        }
-    }
-
-    //--Mission--//
-    public enum Missions 
-        {
-        None,
-        MoveBroken,
-        FixWire,
-        ChangeBulb
-        }
-    public Missions missionsType;
-
-    void Mission()
-    {
-        if(missionsType == Missions.MoveBroken)
-        {
-            Debug.Log("Move Broken");
+            T temp = inputList[i];
+            int rand = Random.Range(i, inputList.Count);
+            inputList[i] = inputList[rand];
+            inputList[rand] = temp;
         }
     }
 }
