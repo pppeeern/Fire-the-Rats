@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f611e09e9a5237469c7cb2ab007ff25
+guid: 6e961975cd181b847be3736b273b4fff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterTap_Handle_0
+      name: Bed_0
       rect:
         serializedVersion: 2
-        x: 750
-        y: 1315
-        width: 15
-        height: 6
+        x: 1138
+        y: 1000
+        width: 288
+        height: 441
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fdd2ffcca7c7bc45b5ff8e3bc6f73d0
-      internalID: -1880891214
+      spriteID: 843e87ec287ce6a4e9fe9eb1d73c94c7
+      internalID: 172622833
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterTap_Handle_0: -1880891214
+      Bed_0: 172622833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

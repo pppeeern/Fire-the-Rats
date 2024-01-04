@@ -121,7 +121,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BrokenBulb_4_0
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 455
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313e2e8dadf570c4189e993efcbee4e2
+      internalID: -2140398617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenBulb_4_1
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 451
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d58710490b5bd4788000b4bea4ab6b
+      internalID: 473715927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenBulb_4_2
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 452
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0dc6078e1234d3419b2407f3da4a1de
+      internalID: -1588110449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +195,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BrokenBulb_4_0: -2140398617
+      BrokenBulb_4_1: 473715927
+      BrokenBulb_4_2: -1588110449
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

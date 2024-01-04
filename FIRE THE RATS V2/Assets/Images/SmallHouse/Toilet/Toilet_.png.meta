@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06cf136c8cec51c47a713b6aec992a2d
+guid: 2b01511dd873cd8439cedc90c03d0319
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Toilet__0
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 916
+        width: 143
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6e2fe8e6a60d945baf9c677417e838
+      internalID: 1470920039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +153,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Toilet__0: 1470920039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

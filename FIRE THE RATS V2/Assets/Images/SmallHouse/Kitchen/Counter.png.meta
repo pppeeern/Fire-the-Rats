@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f611e09e9a5237469c7cb2ab007ff25
+guid: 95d399366d50bfb47bf2645733e8e49b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,22 +123,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterTap_Handle_0
+      name: Counter_0
       rect:
         serializedVersion: 2
-        x: 750
-        y: 1315
-        width: 15
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 226
+        y: 191
+        width: 448
+        height: 446
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fdd2ffcca7c7bc45b5ff8e3bc6f73d0
-      internalID: -1880891214
+      spriteID: 14290947648cc984795806d4fb330447
+      internalID: -1355254137
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterTap_Handle_0: -1880891214
+      Counter_0: -1355254137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

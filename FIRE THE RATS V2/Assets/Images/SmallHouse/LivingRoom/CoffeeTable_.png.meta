@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f611e09e9a5237469c7cb2ab007ff25
+guid: e327422b2e69875409ccea2c02ce4b82
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,22 +123,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterTap_Handle_0
+      name: CoffeeTable__0
       rect:
         serializedVersion: 2
-        x: 750
-        y: 1315
-        width: 15
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1111
+        y: 391
+        width: 225
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fdd2ffcca7c7bc45b5ff8e3bc6f73d0
-      internalID: -1880891214
+      spriteID: c3f269eaba6240f40bd185641b7ef40f
+      internalID: 1499716350
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterTap_Handle_0: -1880891214
+      CoffeeTable__0: 1499716350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
