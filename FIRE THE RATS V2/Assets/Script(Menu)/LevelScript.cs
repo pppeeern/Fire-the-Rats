@@ -15,9 +15,9 @@ public class LevelScript : MonoBehaviour {
         SceneManager.LoadSceneAsync(0);
     }
 
-    public void PreviousScene()
+    public void GoToNextScene()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void buttonOneClicked() { 
