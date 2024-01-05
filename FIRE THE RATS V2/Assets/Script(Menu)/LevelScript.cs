@@ -10,6 +10,9 @@ public class LevelScript : MonoBehaviour {
 
     public Button btnTwoOne, btnTwoTwo, btnTwoThree, btnTwoFour;
     public bool btnOneHasClick, btnTwoHasClick, btnThreeHasClick, btnFourHasClick = false;
+    public bool allBtnDisabled = false;
+
+
 
     public void ReturnToMenu() {
         SceneManager.LoadSceneAsync(0);
@@ -20,9 +23,10 @@ public class LevelScript : MonoBehaviour {
         SceneManager.LoadSceneAsync(2);
     }
 
-    public void buttonOneClicked() { 
+    public void buttonOneClicked() {
         btnTwoOne.interactable = false;
         btnTwoOne.Select();
+
     }
 
     public void buttonTwoClicked()
@@ -43,6 +47,26 @@ public class LevelScript : MonoBehaviour {
         btnTwoFour.interactable = false;
     }
 
+    public void buttonTwoOneClicked()
+    { 
+
+    }
+
+    public void buttonTwoTwoClicked()
+    {
+
+    }
+
+    public void buttonTwoThreeClicked()
+    {
+
+    }
+
+    public void buttonTwoFourClicked()
+    {
+
+    }
+
     public void DisableAllButton()
     {
         btnTwoOne.interactable = false;
@@ -50,4 +74,6 @@ public class LevelScript : MonoBehaviour {
         btnTwoThree.interactable = false;
         btnTwoFour.interactable = false;
     }
+
+
 }

@@ -557,7 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGM: {fileID: 1996986534}
   SFX: {fileID: 243147073}
-  background: {fileID: 8300000, guid: f6267d10b835bce4fa5f1bd0b220d664, type: 3}
+  background: {fileID: 8300000, guid: 21de36ab2f855504285dcb30a18a681c, type: 3}
   click: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
 --- !u!4 &166173365
 Transform:
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: de3a5aa934bebf54889a6d0d07e910bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee02d4b559e03d245b7a68e8d7a7602f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
