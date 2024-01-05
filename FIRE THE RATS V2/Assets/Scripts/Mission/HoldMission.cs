@@ -28,7 +28,7 @@ public class HoldMission : MonoBehaviour
         isTrigger = gameObject.GetComponent<MissionSettings>().isTrigger;
         if (isTrigger)
         {
-            progressBar.gameObject.SetActive(true);
+            progressBar.gameObject.transform.parent.gameObject.SetActive(true);
             //Get Player
             player = field.player;
             if(player.GetComponent<PlayerControl>().PlayerIndex == 1)
@@ -70,7 +70,7 @@ public class HoldMission : MonoBehaviour
         {
             holdTimer = 0;
             progressBar.fillAmount = 0;
-            progressBar.gameObject.SetActive(false);
+            progressBar.gameObject.transform.parent.gameObject.SetActive(false);
         }
     }
 }

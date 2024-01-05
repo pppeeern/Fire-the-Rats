@@ -21,7 +21,7 @@ public class MissionLabel : MonoBehaviour
         if(missionController.isRandom)
         {
             missionLists = missionController.missionLists;
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < missionLists.Length; i++)
             {
                 Transform label = transform.GetChild(i);
                 //Debug.Log("Child name: " + label.name);

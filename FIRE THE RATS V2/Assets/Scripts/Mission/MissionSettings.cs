@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MissionSettings : MonoBehaviour
 {
@@ -20,11 +21,28 @@ public class MissionSettings : MonoBehaviour
     private Interactable field;
     private GameObject player;
     private MissionController controller;
+    private GameObject label;
+
+    public int missionIndex;
+    public string detail;
+    GameObject[] missionLists;
 
     void Start()
     {
         field = GetComponentInChildren<Interactable>();
         controller = GameObject.Find("Settings").GetComponent<MissionController>();
+        label = GameObject.Find("LabelContainer");
+        missionLists = controller.missionLists;
+
+        //Get Mission Index
+        missionIndex = -1;
+        for (int i = 0; i < missionLists.Length; i++)
+        {
+            if (missionLists[i].name == detail)
+            {
+                missionIndex = i+1; break;
+            }
+        }
     }
 
     void Update()
@@ -61,6 +79,7 @@ public class MissionSettings : MonoBehaviour
         GetComponent<SpriteRenderer>().material = defaultMat;
         controller.completedMission++;
         Debug.Log(controller.completedMission);
+        label.transform.Find("Label"+missionIndex).gameObject.SetActive(false);
     }
 
     //--Mission--//
