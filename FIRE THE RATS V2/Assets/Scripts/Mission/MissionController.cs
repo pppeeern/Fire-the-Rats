@@ -9,6 +9,7 @@ public class MissionController : MonoBehaviour
     [SerializeField] List<GameObject> missionReferences;
     public GameObject[] missionLists;
     public bool isRandom;
+    public int completedMission;
 
     public void Start()
     {
@@ -19,7 +20,6 @@ public class MissionController : MonoBehaviour
        {
             for(int i = 0; i <= missionLists.Length - 1; i++)
             {
-                Debug.Log($"{missionLists[i].name}   Position: {missionLists[i].transform.position}");
                 Instantiate(missionLists[i], missionLists[i].transform.position, missionLists[i].transform.rotation, transform.parent);
             }
        }

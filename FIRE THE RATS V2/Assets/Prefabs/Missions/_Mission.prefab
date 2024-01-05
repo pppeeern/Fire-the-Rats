@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 8571512348129967013}
   - component: {fileID: -4613359922947840079}
   m_Layer: 0
-  m_Name: Mission
+  m_Name: _Mission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 893a4f0dbad8dde418347d64084cf846, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,8 +281,8 @@ MonoBehaviour:
         m_CallState: 2
   player: {fileID: 0}
   uiContainer: {fileID: 5894974980878872742}
-  defaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  highlight: {fileID: 2100000, guid: 893a4f0dbad8dde418347d64084cf846, type: 2}
+  defaultMat: {fileID: 2100000, guid: 893a4f0dbad8dde418347d64084cf846, type: 2}
+  highlight: {fileID: 2100000, guid: 516e8b01df3214f45a768ec9d89f099c, type: 2}
 --- !u!1 &4531316241574624766
 GameObject:
   m_ObjectHideFlags: 0

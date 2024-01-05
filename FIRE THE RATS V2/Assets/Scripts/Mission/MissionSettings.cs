@@ -19,10 +19,12 @@ public class MissionSettings : MonoBehaviour
     public bool isTrigger = false;
     private Interactable field;
     private GameObject player;
+    private MissionController controller;
 
     void Start()
     {
         field = GetComponentInChildren<Interactable>();
+        controller = GameObject.Find("Settings").GetComponent<MissionController>();
     }
 
     void Update()
@@ -57,6 +59,8 @@ public class MissionSettings : MonoBehaviour
         MissionExit();
         field.gameObject.SetActive(false);
         GetComponent<SpriteRenderer>().material = defaultMat;
+        controller.completedMission++;
+        Debug.Log(controller.completedMission);
     }
 
     //--Mission--//
@@ -68,7 +72,7 @@ public class MissionSettings : MonoBehaviour
         }
         else if(missionsType == Missions.MessStove)
         {
-            Debug.Log("Clean Stove");
+            GameObject.Find("Stove_0").SetActive(false);
         }
     }
 }

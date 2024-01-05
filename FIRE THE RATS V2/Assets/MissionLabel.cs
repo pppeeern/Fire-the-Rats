@@ -24,9 +24,9 @@ public class MissionLabel : MonoBehaviour
             for (int i = 0; i < transform.childCount; i++)
             {
                 Transform label = transform.GetChild(i);
-                Debug.Log("Child name: " + label.name);
+                //Debug.Log("Child name: " + label.name);
                 TMP_Text textComponent = label.GetComponent<TMP_Text>();
-                Debug.Log(textComponent.text);
+                //Debug.Log(textComponent.text);
                 textComponent.text = missionLists[i].name;
             }
         }

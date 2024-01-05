@@ -37,7 +37,7 @@ public class HoldMission : MonoBehaviour
             }
             else if(player.GetComponent<PlayerControl>().PlayerIndex == 2)
             {
-                holdKey = KeyCode.Keypad0;
+                holdKey = KeyCode.RightControl;
             }
 
             //Get Input
