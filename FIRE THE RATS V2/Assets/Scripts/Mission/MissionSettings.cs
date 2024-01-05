@@ -11,7 +11,7 @@ public class MissionSettings : MonoBehaviour
         {
         None,
         MoveBroken,
-        FixWire,
+        FixTVCable,
         ChangeBulb,
         MessStove
         }
@@ -79,15 +79,15 @@ public class MissionSettings : MonoBehaviour
         GetComponent<SpriteRenderer>().material = defaultMat;
         controller.completedMission++;
         Debug.Log(controller.completedMission);
-        label.transform.Find("Label"+missionIndex).gameObject.SetActive(false);
+        //label.transform.Find("Label"+missionIndex).gameObject.SetActive(false);
     }
 
     //--Mission--//
     void Mission()
     {
-        if(missionsType == Missions.MoveBroken)
+        if(missionsType == Missions.FixTVCable)
         {
-            Debug.Log("Move Broken");
+            GameObject.Find("TV_Cable_0").SetActive(false);
         }
         else if(missionsType == Missions.MessStove)
         {

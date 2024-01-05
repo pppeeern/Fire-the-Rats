@@ -27,7 +27,7 @@ public class MissionLabel : MonoBehaviour
                 //Debug.Log("Child name: " + label.name);
                 TMP_Text textComponent = label.GetComponent<TMP_Text>();
                 //Debug.Log(textComponent.text);
-                textComponent.text = missionLists[i].name;
+                textComponent.text = missionLists[i].GetComponent<MissionSettings>().detail;
             }
         }
     }
