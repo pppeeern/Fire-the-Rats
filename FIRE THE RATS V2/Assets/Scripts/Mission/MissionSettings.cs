@@ -7,42 +7,36 @@ using TMPro;
 
 public class MissionSettings : MonoBehaviour
 {
+ //   [SerializeField] private GameObject original;
     public enum Missions 
         {
         None,
-        MoveBroken,
+        FixXPlug,
         FixTVCable,
-        ChangeBulb,
-        MessStove
+        BulbSplinter,
+        MessStove,
+        FixLampWire,
+        FixAirCon,
+        FixAirCom,
         }
     public Missions missionsType;
     //
     public bool isTrigger = false;
     private Interactable field;
     private GameObject player;
-    private MissionController controller;
+    private GameController controller;
     private GameObject label;
 
-    public int missionIndex;
+    public bool finish;
     public string detail;
     GameObject[] missionLists;
 
     void Start()
     {
         field = GetComponentInChildren<Interactable>();
-        controller = GameObject.Find("Settings").GetComponent<MissionController>();
+        controller = GameObject.Find("Settings").GetComponent<GameController>();
         label = GameObject.Find("LabelContainer");
         missionLists = controller.missionLists;
-
-        //Get Mission Index
-        missionIndex = -1;
-        for (int i = 0; i < missionLists.Length; i++)
-        {
-            if (missionLists[i].name == detail)
-            {
-                missionIndex = i+1; break;
-            }
-        }
     }
 
     void Update()
@@ -75,23 +69,37 @@ public class MissionSettings : MonoBehaviour
     public void MissionFinish()
     {
         MissionExit();
+        finish = true;
         field.gameObject.SetActive(false);
         GetComponent<SpriteRenderer>().material = defaultMat;
         controller.completedMission++;
         Debug.Log(controller.completedMission);
-        //label.transform.Find("Label"+missionIndex).gameObject.SetActive(false);
+        //original.GetComponent<MissionSettings>().finish = true; finish = true;
     }
 
     //--Mission--//
     void Mission()
     {
-        if(missionsType == Missions.FixTVCable)
+        if(missionsType == Missions.FixXPlug)
+        {
+            GameObject.Find("ExtensionPlug_0").SetActive(false);
+        }
+        else if (missionsType == Missions.FixTVCable)
         {
             GameObject.Find("TV_Cable_0").SetActive(false);
+        }
+        else if (missionsType == Missions.BulbSplinter)
+        {
+            gameObject.SetActive(false);
+            MissionFinish();
         }
         else if(missionsType == Missions.MessStove)
         {
             GameObject.Find("Stove_0").SetActive(false);
+        }
+        else if (missionsType == Missions.FixLampWire)
+        {
+            GameObject.Find("Lamp_Wire_0").SetActive(false);
         }
     }
 }

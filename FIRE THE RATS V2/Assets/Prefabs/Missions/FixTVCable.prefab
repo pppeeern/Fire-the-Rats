@@ -69,6 +69,14 @@ PrefabInstance:
       value: Fix broken TV cable
       objectReference: {fileID: 0}
     - target: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+      propertyPath: finish
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+      propertyPath: original
+      value: 
+      objectReference: {fileID: 2080697547815430623}
+    - target: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
       propertyPath: missionsType
       value: 2
       objectReference: {fileID: 0}
@@ -148,6 +156,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8903960581201674235, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -161,7 +173,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
   m_PrefabInstance: {fileID: 3811203524086595994}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2080697547815430623}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88211d4a62c07854085bc1cb98325b62, type: 3}
@@ -207,3 +219,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -2.3953614}
   serializedVersion: 2
   m_Radius: 1.2213964
+--- !u!1 &2080697547815430623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2883431915568146501, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+  m_PrefabInstance: {fileID: 3811203524086595994}
+  m_PrefabAsset: {fileID: 0}

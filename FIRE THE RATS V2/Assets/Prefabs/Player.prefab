@@ -163,5 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerIndex: 0
   PlayerSpeed: 10
+  shit: {fileID: -1785119279, guid: abd274acf3505664384cb85876e88204, type: 3}
   movement: {x: 0, y: 0}
   CanMove: 1
+  isInfect: 0

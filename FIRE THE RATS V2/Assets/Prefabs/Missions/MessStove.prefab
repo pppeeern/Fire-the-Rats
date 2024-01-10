@@ -157,6 +157,10 @@ PrefabInstance:
       value: Clean the stove
       objectReference: {fileID: 0}
     - target: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+      propertyPath: original
+      value: 
+      objectReference: {fileID: 5710695110288265021}
+    - target: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -190,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883431915568146501, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
       propertyPath: m_Name
-      value: Clean the stove
+      value: MessStove
       objectReference: {fileID: 0}
     - target: {fileID: 3154121259168475872, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -296,6 +300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5710695110288265021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2883431915568146501, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
+  m_PrefabInstance: {fileID: 7441201122489689976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5725097541695834173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2898019216319999813, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
@@ -351,7 +360,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4613359922947840079, guid: c11b3bd260c9a404080240ba41b92a5f, type: 3}
   m_PrefabInstance: {fileID: 7441201122489689976}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5710695110288265021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88211d4a62c07854085bc1cb98325b62, type: 3}

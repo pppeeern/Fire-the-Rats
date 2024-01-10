@@ -7,11 +7,16 @@ public class PlayerControl : MonoBehaviour
     public int PlayerIndex;
     public float PlayerSpeed;
     private Rigidbody2D rb;
+    private SpriteRenderer rd;
+    [SerializeField] Sprite shit;
     public Vector2 movement;
     public bool CanMove = true;
+    public bool isInfect;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rd = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -27,6 +32,16 @@ public class PlayerControl : MonoBehaviour
             movement.x = Input.GetAxisRaw("2H");
             movement.y = Input.GetAxisRaw("2V");
             movement.Normalize();
+        }
+        if(isInfect)
+        {
+            CanMove = false;
+            rb.simulated = false;
+            rd.sprite = shit;
+        }
+        else
+        {
+            CanMove = true;
         }
     }
     private void FixedUpdate()
